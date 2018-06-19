@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UiControl : MonoBehaviour {
 
 	// Use this for initialization
@@ -12,6 +12,7 @@ public class UiControl : MonoBehaviour {
 	public float scalingspeed = 0.01f;
 	bool scaleUp = false;
 	bool scaleDown = false;
+	public int step = 1;
 
 	// Update is called once per frame
 	void Update () {
@@ -32,21 +33,20 @@ public class UiControl : MonoBehaviour {
 		GameObject.FindWithTag("Lego").transform.localScale -= new Vector3(scalingspeed,scalingspeed,scalingspeed);
 	}
 
-	public void up()
+	public void previousStep()
 	{
-		scaleUp = true;
-		scaleDown = false;
+		step -= 1;
+		updateStepCounter();
+	}
+	public void nextStep()
+	{
+		step += 1;
+		updateStepCounter();
 	}
 
-	public void down()
+	public void updateStepCounter()
 	{
-		scaleDown = true;
-		scaleUp = false;
-	}
-
-	public void stop()
-	{
-		scaleUp = false;
-		scaleDown = false;
+		Text textObject = GameObject.FindWithTag("step_counter").GetComponent<Text>();
+		textObject.text = "ETAPA " + step.ToString();
 	}
 }

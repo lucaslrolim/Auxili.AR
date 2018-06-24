@@ -35,8 +35,11 @@ public class UiControl : MonoBehaviour {
 
 	public void previousStep()
 	{
-		step -= 1;
-		updateStepCounter();
+        if(step>1)
+        {
+            step -= 1;
+            updateStepCounter();
+        }
 	}
 	public void nextStep()
 	{

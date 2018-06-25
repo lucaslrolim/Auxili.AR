@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class UiControl : MonoBehaviour {
-
+    public GameObject myLego;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        myLego = null;
+    }
 
 	public float scalingspeed = 0.01f;
 	bool scaleUp = false;
@@ -39,12 +39,18 @@ public class UiControl : MonoBehaviour {
         {
             step -= 1;
             updateStepCounter();
+            myLego.SetActive(false);
         }
 	}
 	public void nextStep()
 	{
-		step += 1;
-		updateStepCounter();
+        if(!myLego)
+        {
+            myLego = GameObject.FindWithTag("Lego");
+        }
+        step += 1;
+        myLego.SetActive(true);
+        updateStepCounter();
 	}
 
 	public void updateStepCounter()

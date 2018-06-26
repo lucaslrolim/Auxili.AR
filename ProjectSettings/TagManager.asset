@@ -18,6 +18,7 @@ TagManager:
   - step_10
   - step_11
   - step_0
+  - step_selector
   layers:
   - Default
   - TransparentFX

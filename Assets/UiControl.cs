@@ -4,24 +4,36 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using Vuforia;
+using System;
 
 public class UiControl : MonoBehaviour {
-
+    private Dropdown m_Dropdown;
     public Dictionary<string, List<GameObject>> myLegoDict = new Dictionary<string, List<GameObject>>();
-	public float scalingspeed = 0.01f;
-	public bool  scaleUp      = false;
-	public bool  scaleDown    = false;
-	public int   step         = 0;
+	public float       scalingspeed = 0.01f;
+	public bool        scaleUp      = false;
+	public bool        scaleDown    = false;
+	public int         step         = 1;
+    public const int   lastStep     = 11;
+    public const int   firstStep    = 1;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
-        step = 0;
+        step = 1;
         UpdateStepCounter();
+        InitGameObjects();
+
+        //Fetch the Dropdown GameObject
+        GameObject go = GameObject.FindGameObjectWithTag("step_selector");
+        m_Dropdown = go.GetComponent<Dropdown>();
+        //Add listener for when the value of the Dropdown changes, to take action
+        m_Dropdown.onValueChanged.AddListener(delegate {
+            DropdownValueChanged(m_Dropdown);
+        });
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		if(scaleUp == true)
 		{
 			ScaleUpButton();
@@ -45,15 +57,15 @@ public class UiControl : MonoBehaviour {
 
 	public void PreviousStep()
 	{
-        if(step > 0)
+        if(step > firstStep)
         {
             step -= 1;
             UpdateStepCounter();
 
             // Select all GameObjects from next step and set active to false
-            string tag = string.Format("step_{0}", step + 1);
+            string tag = string.Format("step_{0}", step);
             print(tag);
-            myLegoDict[tag].ForEach(go => go.SetActive(false));
+            RenderStep();
 
             // Set view again
             if (step == 0)
@@ -65,48 +77,76 @@ public class UiControl : MonoBehaviour {
 
 	public void NextStep()
 	{
-        string tag;
-        if (myLegoDict.Count == 0)
+        if (step < lastStep)
         {
-            // Initialize all GameObjects as inactive
-            for (int i = 0; i <= 11; i++)
+            step += 1;
+            UpdateStepCounter();
+
+            // Disable full rocket view
+            if (step > 0)
             {
-                tag = string.Format("step_{0}", i);
-                print("Init: " + tag);
-                foreach (GameObject go in GameObject.FindGameObjectsWithTag(tag).ToList())
-                {
-                    if (!myLegoDict.ContainsKey(tag))
-                    {
-                        myLegoDict.Add(tag, new List<GameObject>());
-                    }
-
-                    myLegoDict[tag].Add(go);
-
-                    go.SetActive(false);
-                }
+                //myLegoDict["step_0"][0].SetActive(false);
             }
 
-            // Enable Full Rocket View
-            //myLegoDict["step_0"][0].SetActive(true);
+            // Select all GameObjects from current step and set active to true
+            string tag = string.Format("step_{0}", step);
+            print(tag);
+            RenderStep(); 
         }
+    }
 
-        step += 1;
+    //Render step accordingly to new step
+    private void DropdownValueChanged(Dropdown change)
+    {
+        // Set global step
+        step = change.value + 1;
+        // Render step
+        RenderStep();
+        // Update step counter
         UpdateStepCounter();
 
-        // Disable full rocket view
-        if (step > 0)
+    }
+
+    private void InitGameObjects()
+    {
+        for (int i = 0; i <= 11; i++)
         {
-            //myLegoDict["step_0"][0].SetActive(false);
+            tag = string.Format("step_{0}", i);
+            print("Init: " + tag);
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag(tag).ToList())
+            {
+                if (!myLegoDict.ContainsKey(tag))
+                {
+                    myLegoDict.Add(tag, new List<GameObject>());
+                }
+
+                myLegoDict[tag].Add(go);
+
+                go.SetActive(false);
+            }
+        }
+    }
+
+    private void RenderStep()
+    {
+        string tag = string.Empty;
+
+        // Set all previous steps as visible
+        for (int i = 1; i <= step; i++)
+        {
+            tag = string.Format("step_{0}", i);
+            myLegoDict[tag].ForEach(go => go.SetActive(true));
         }
 
-        // Select all GameObjects from current step and set active to true
-        tag = string.Format("step_{0}", step);
-        print(tag);
-        myLegoDict[tag].ForEach(go => go.SetActive(true));
+        // Set all next steps as inactive
+        for (int i = step + 1; i <= lastStep; i++)
+        {
+            tag = string.Format("step_{0}", i);
+            myLegoDict[tag].ForEach(go => go.SetActive(false));
+        }
+    }
 
-	}
-
-	public void UpdateStepCounter()
+    private void UpdateStepCounter()
 	{
 		Text textObject = GameObject.FindWithTag("step_counter").GetComponent<Text>();
 		textObject.text = "ETAPA " + step.ToString();

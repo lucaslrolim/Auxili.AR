@@ -699,7 +699,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 408592439}
   m_HandleRect: {fileID: 408592438}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1156,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000006908287}
+  m_AnchoredPosition: {x: -0.00006103456, y: -0.000006908287}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!43 &768704451
@@ -2817,7 +2817,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -383, y: 884}
-  m_SizeDelta: {x: 250, y: 120}
+  m_SizeDelta: {x: 300, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1277420680
 MonoBehaviour:
@@ -2860,18 +2860,45 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 1999207571}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 11
   m_Options:
     m_Options:
     - m_Text: ETAPA 1
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - m_Text: ETAPA 2
       m_Image: {fileID: 0}
     - m_Text: ETAPA 3
       m_Image: {fileID: 0}
+    - m_Text: ETAPA 4
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 5
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 6
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 7
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 8
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 9
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 10
+      m_Image: {fileID: 0}
+    - m_Text: ETAPA 11
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 36b7fe2fda0ade2438c0198e6428f217, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1277420681
@@ -3950,7 +3977,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ETAPA 1
+  m_Text: ETAPA 11
 --- !u!222 &1823448975
 CanvasRenderer:
   m_ObjectHideFlags: 0

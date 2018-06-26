@@ -19,10 +19,6 @@ public class UiControl : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        step = 1;
-        UpdateStepCounter();
-        InitGameObjects();
-
         //Fetch the Dropdown GameObject
         GameObject go = GameObject.FindGameObjectWithTag("step_selector");
         m_Dropdown = go.GetComponent<Dropdown>();
@@ -30,6 +26,9 @@ public class UiControl : MonoBehaviour {
         m_Dropdown.onValueChanged.AddListener(delegate {
             DropdownValueChanged(m_Dropdown);
         });
+        
+        UpdateStepCounter();
+        InitGameObjects();
     }
 
     // Update is called once per frame
@@ -148,7 +147,7 @@ public class UiControl : MonoBehaviour {
 
     private void UpdateStepCounter()
 	{
-		Text textObject = GameObject.FindWithTag("step_counter").GetComponent<Text>();
-		textObject.text = "ETAPA " + step.ToString();
+        m_Dropdown.value = step - 1;
+        m_Dropdown.RefreshShownValue();
 	}
 }

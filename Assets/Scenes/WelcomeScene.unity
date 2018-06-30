@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106399210}
   - component: {fileID: 106399211}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ Transform:
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children: []
   m_Father: {fileID: 625246843}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &106399211
 SpriteRenderer:
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419547707}
   - component: {fileID: 419547708}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: boxIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ Canvas:
   m_GameObject: {fileID: 625246839}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -411,8 +411,8 @@ RectTransform:
   m_Children:
   - {fileID: 786205986}
   - {fileID: 419547707}
-  - {fileID: 106399210}
   - {fileID: 958335541}
+  - {fileID: 106399210}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 958335543}
   - component: {fileID: 958335542}
   m_Layer: 5
-  m_Name: AppTitle (1)
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +676,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 625246843}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

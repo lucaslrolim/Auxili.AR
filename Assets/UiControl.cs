@@ -60,7 +60,7 @@ public class UiControl : MonoBehaviour {
         {
             step -= 1;
             UpdateStepCounter();
-
+            UpdateStepPieces();
             // Select all GameObjects from next step and set active to false
             string tag = string.Format("step_{0}", step);
             print(tag);
@@ -80,6 +80,7 @@ public class UiControl : MonoBehaviour {
         {
             step += 1;
             UpdateStepCounter();
+            UpdateStepPieces();
 
             // Disable full rocket view
             if (step > 0)
@@ -150,4 +151,42 @@ public class UiControl : MonoBehaviour {
         m_Dropdown.value = step - 1;
         m_Dropdown.RefreshShownValue();
 	}
+
+    private void UpdateStepPieces()
+    {
+        // clean slot space //
+
+        List<GameObject> children = new List<GameObject> ();
+
+        Transform target; 
+        GameObject slots;
+
+        slots = GameObject.FindGameObjectWithTag("slots");
+        target = slots.transform;
+        // Getting all children and putting them to a new list
+        for ( int i = 0; i < target.childCount; i++ )
+        {
+         children.Add ( target.GetChild (i).gameObject );
+        }
+        // Loop through children and destroy them
+        foreach ( GameObject go in children )
+        {
+        if ( Application.isEditor )
+                {
+                    GameObject.DestroyImmediate ( go );
+                }
+                else
+                {
+                    GameObject.Destroy ( go );
+                }
+        }
+
+        // Add new pieces in empty spaces //
+        
+        GameObject obj = (GameObject)Instantiate(Resources.Load("Rocket/cauda-amarela"), new Vector3(0, 580, 0), Quaternion.identity);
+        obj.transform.localScale += new Vector3(10F,10F,10F);
+        obj.transform.parent = target;
+        obj.AddComponent<MeshFilter>();
+        obj.AddComponent<MeshRenderer>();
+    }
 }

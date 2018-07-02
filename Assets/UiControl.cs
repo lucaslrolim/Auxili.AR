@@ -29,6 +29,7 @@ public class UiControl : MonoBehaviour {
         
         UpdateStepCounter();
         InitGameObjects();
+        RenderStep();
     }
 
     // Update is called once per frame

@@ -20,6 +20,10 @@ TagManager:
   - step_0
   - step_selector
   - slots
+  - piece_1
+  - slot_1
+  - slot_2
+  - slot_3
   layers:
   - Default
   - TransparentFX

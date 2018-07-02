@@ -15,7 +15,20 @@ public class UiControl : MonoBehaviour {
 	public int         step         = 1;
     public const int   lastStep     = 11;
     public const int   firstStep    = 1;
-
+    public Dictionary<int, string[]> stepPieces = new Dictionary<int, string[]>()
+    {
+        {1, new string[] {"sprites/pin-base","sprites/base","None"} },
+        {2, new string[] {"sprites/base-2","sprites/fogo-amarelo","sprites/fogo-laranja"} },
+        {3, new string[] {}},
+        {4, new string[] {"sprites/quadrangular-quatro-pinos","sprites/quadrangular-baixo-quatro-pinos","sprites/quadrangular-baixo-um-pino"}  },
+        {5, new string[] {"sprites/triangulo-superior-lateral","sprites/retangular-pequeno-um-pino","None"} },
+        {6, new string[] {"sprites/latera-azul","sprites/quadrangular-baixo-um-pino","sprites/triangulo-superior-lateral"} },
+        {7, new string[] {"sprites/retangular-alto-pequeno-4-pinos","sprites/quadrangular-pequeno-um-pino","None"} },
+        {8, new string[] {"sprites/ponta-foguete","sprites/retangular-alto-pequeno-1-pino","None"} },
+        {9, new string[] {"sprites/retangular-dois-pinos","sprites/quadrangular-pequeno-um-pino","None"} },
+        {10, new string[] {"sprites/triangular-arredondado-lateral-topo","None","None"} },
+        {11, new string[] {"sprites/luz-azul","None","None"} },
+    };
     // Use this for initialization
     void Start ()
     {
@@ -33,6 +46,7 @@ public class UiControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
 		if(scaleUp == true)
 		{
 			ScaleUpButton();
@@ -104,6 +118,7 @@ public class UiControl : MonoBehaviour {
         RenderStep();
         // Update step counter
         UpdateStepCounter();
+        UpdateStepPieces();
 
     }
 
@@ -154,39 +169,17 @@ public class UiControl : MonoBehaviour {
 
     private void UpdateStepPieces()
     {
-        // clean slot space //
 
-        List<GameObject> children = new List<GameObject> ();
+        GameObject slot_1;
+        GameObject slot_2;
+        GameObject slot_3;
 
-        Transform target; 
-        GameObject slots;
+        slot_1 = GameObject.FindGameObjectWithTag("slot_1");
+        slot_2 = GameObject.FindGameObjectWithTag("slot_2");
+        slot_3 = GameObject.FindGameObjectWithTag("slot_3");
 
-        slots = GameObject.FindGameObjectWithTag("slots");
-        target = slots.transform;
-        // Getting all children and putting them to a new list
-        for ( int i = 0; i < target.childCount; i++ )
-        {
-         children.Add ( target.GetChild (i).gameObject );
-        }
-        // Loop through children and destroy them
-        foreach ( GameObject go in children )
-        {
-        if ( Application.isEditor )
-                {
-                    GameObject.DestroyImmediate ( go );
-                }
-                else
-                {
-                    GameObject.Destroy ( go );
-                }
-        }
-
-        // Add new pieces in empty spaces //
-        
-        GameObject obj = (GameObject)Instantiate(Resources.Load("Rocket/cauda-amarela"), new Vector3(0, 580, 0), Quaternion.identity);
-        obj.transform.localScale += new Vector3(10F,10F,10F);
-        obj.transform.parent = target;
-        obj.AddComponent<MeshFilter>();
-        obj.AddComponent<MeshRenderer>();
+        slot_1.GetComponent<SpriteRenderer>().sprite =  Resources.Load <Sprite> (stepPieces[step][0]);
+        slot_2.GetComponent<SpriteRenderer>().sprite =  Resources.Load <Sprite> (stepPieces[step][1]);
+        slot_3.GetComponent<SpriteRenderer>().sprite =  Resources.Load <Sprite> (stepPieces[step][2]);
     }
 }

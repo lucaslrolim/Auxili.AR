@@ -19,7 +19,7 @@ public class UiControl : MonoBehaviour {
     {
         {1, new string[] {"sprites/pin-base","sprites/base","None"} },
         {2, new string[] {"sprites/base-2","sprites/fogo-amarelo","sprites/fogo-laranja"} },
-        {3, new string[] {}},
+        {3, new string[] {"sprites/quadrangular-quatro-pinos","None", "None"}},
         {4, new string[] {"sprites/quadrangular-quatro-pinos","sprites/quadrangular-baixo-quatro-pinos","sprites/quadrangular-baixo-um-pino"}  },
         {5, new string[] {"sprites/triangulo-superior-lateral","sprites/retangular-pequeno-um-pino","None"} },
         {6, new string[] {"sprites/latera-azul","sprites/quadrangular-baixo-um-pino","sprites/triangulo-superior-lateral"} },

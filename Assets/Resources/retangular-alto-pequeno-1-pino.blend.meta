@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: eeedab5dbe7cf12409325a03ab5021ee
+guid: bc678a89e3739244c9ba24844d0e2401
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
-    100002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
-    100004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
-    100006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
-    100008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
-    100010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
-    100012: ponta
+    100000: Lego_Brick_1X1
+    100002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
+    100004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
+    100006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
+    100008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
+    100010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
+    100012: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
     100014: //RootNode
-    400000: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
-    400002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
-    400004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
-    400006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
-    400008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
-    400010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
-    400012: ponta
+    400000: Lego_Brick_1X1
+    400002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
+    400004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
+    400006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
+    400008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
+    400010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
+    400012: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
     400014: //RootNode
     2100000: Black_005
     2100002: Black_002
@@ -26,27 +26,27 @@ ModelImporter:
     2100008: Black_001
     2100010: Black
     2100012: unnamed
-    2300000: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
-    2300002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
-    2300004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
-    2300006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
-    2300008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
-    2300010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
-    2300012: ponta
-    3300000: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
-    3300002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
-    3300004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
-    3300006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
-    3300008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
-    3300010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
-    3300012: ponta
+    2300000: Lego_Brick_1X1
+    2300002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
+    2300004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
+    2300006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
+    2300008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
+    2300010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
+    2300012: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
+    3300000: Lego_Brick_1X1
+    3300002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
+    3300004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
+    3300006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
+    3300008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
+    3300010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
+    3300012: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
     4300000: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_003
     4300002: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_000
     4300004: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_001
     4300006: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_19_002
     4300008: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_194
     4300010: Null_72_Null_81_Null_8_MoText11_Text10__23_LEGO7_E20_Cap_195
-    4300012: ponta
+    4300012: Lego_Brick_1X1
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

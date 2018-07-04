@@ -12,6 +12,8 @@ The central concept is to build an Android app that allows the user navigate thr
 - Visualize the 3D pieces to be used at each step
 - user pincer movements to increase or decrease the object
 
+[![App usage](https://img.youtube.com/vi/QlP5UYpTZwQ/0.jpg)](https://www.youtube.com/watch?v=QlP5UYpTZwQ)
+
 ## Dependencies and frameworks
 
 -  Unity 2018

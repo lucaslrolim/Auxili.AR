@@ -12,7 +12,7 @@ The central concept is to build an Android app that allows the user navigate thr
 - Visualize the 3D pieces to be used at each step
 - user pincer movements to increase or decrease the object
 
-## Dependencieis and frameworks
+## Dependencies and frameworks
 
 -  Unity 2018
 - Vuforia

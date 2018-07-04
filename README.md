@@ -21,10 +21,10 @@ The central concept is to build an Android app that allows the user navigate thr
 
 ## Contributors
 
-[Lucas de Paula - Developer](https://github.com/lucasdepaula)
-[Lucas Rolim - Developer](https://github.com/lucaslrolim)
-[Yago Carvalho - Developer](https://github.com/yagoocarvalho)
-[Victoria Molgado - Designer](https://www.behance.net/victoriamolgado)
+- [Lucas de Paula - Developer](https://github.com/lucasdepaula)
+- [Lucas Rolim - Developer](https://github.com/lucaslrolim)
+- [Yago Carvalho - Developer](https://github.com/yagoocarvalho)
+- [Victoria Molgado - Designer](https://www.behance.net/victoriamolgado)
 
 
 
